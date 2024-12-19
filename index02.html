@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人相册 - 我的世界</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="header-content">
+            <h1>个人相册</h1>
+            <p class="subtitle">记录生活 · 定格美好</p>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+            <li><a href="index01.html"><i class="fas fa-heart"></i> 兴趣爱好</a></li>
+            <li><a href="index02.html" class="active"><i class="fas fa-image"></i> 个人相册</a></li>
+            <li><a href="index03.html"><i class="fas fa-school"></i> 我的学校</a></li>
+            <li><a href="index04.html"><i class="fas fa-comments"></i> 在线留言</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2 class="section-title">我的照片墙</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/1.jpg" alt="海边照片">
+                    <div class="gallery-caption">
+                        <h3>海边漫步</h3>
+                        <p>感受海风的轻抚，聆听浪花的声音</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/2.jpg" alt="清晨照片">
+                    <div class="gallery-caption">
+                        <h3>夏日清晨</h3>
+                        <p>晨光中的美好时光，记录生活的温暖瞬间</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/3.jpg" alt="护城河照片">
+                    <div class="gallery-caption">
+                        <h3>护城河畔</h3>
+                        <p>古城的护城河边，感受历史的沉淀</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/4.jpg" alt="钟楼照片">
+                    <div class="gallery-caption">
+                        <h3>钟楼印象</h3>
+                        <p>在西安地标建筑前留下美好回忆</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/5.jpg" alt="园区照片">
+                    <div class="gallery-caption">
+                        <h3>园区漫步</h3>
+                        <p>校园生活中的悠闲时光，记录美好自我</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/6.jpg" alt="公园照片">
+                    <div class="gallery-caption">
+                        <h3>长安公园</h3>
+                        <p>在城市公园中享受休闲时光，感受自然之美</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-upload">
+                <input type="file" class="image-upload" accept="image/*" data-type="gallery">
+                <div class="upload-button">
+                    <i class="fas fa-plus"></i>
+                    <span>添加照片</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-weibo"></i></a>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-qq"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2024 个人主页，All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI对话框 -->
+    <div class="ai-chat" id="aiChat">
+        <!-- AI图标按钮 -->
+        <div class="ai-toggle" onclick="toggleChat()">
+            <i class="fas fa-robot"></i>
+        </div>
+        
+        <!-- 对话框容器 -->
+        <div class="chat-container" id="chatContainer">
+            <div class="ai-chat-header">
+                <span>AI助手</span>
+            </div>
+            <div class="ai-chat-body">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai">
+                        <i class="fas fa-robot"></i>
+                        <span>你好！我是AI助手，有什么可以帮你的吗？</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="输入你的问题...">
+                    <button onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js2.js"></script>
+</body>
+</html> 

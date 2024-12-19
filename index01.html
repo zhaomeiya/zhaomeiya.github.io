@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兴趣爱好 - 我的世界</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 头部和导航栏 -->
+    <header>
+        <div class="header-content">
+            <h1>兴趣爱好</h1>
+            <p class="subtitle">分享我的生活乐趣</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+            <li><a href="index01.html" class="active"><i class="fas fa-heart"></i> 兴趣爱好</a></li>
+            <li><a href="index02.html"><i class="fas fa-image"></i> 个人相册</a></li>
+            <li><a href="index03.html"><i class="fas fa-school"></i> 我的学校</a></li>
+            <li><a href="index04.html"><i class="fas fa-comments"></i> 在线留言</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2 class="section-title">我的兴趣爱好</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <img src="images/音乐.jpg" alt="听音乐">
+                    <i class="fas fa-music"></i>
+                    <h3>听音乐</h3>
+                    <p>喜欢听各种风格的音乐，尤其是民谣和轻音乐。音乐能让我放松心情，获得创作灵感。闲暇时也会学习一些乐器。</p>
+                </div>
+                <div class="interest-card">
+                    <img src="images/电影.jpg" alt="看电影">
+                    <i class="fas fa-film"></i>
+                    <h3>看电影</h3>
+                    <p>热爱观看各类电影，特别是纪录片和文艺片。通过电影了解不同的人生故事，感受独特的艺术魅力。经常和朋友一起探讨剧情。</p>
+                </div>
+                <div class="interest-card">
+                    <img src="images/美食.jpg" alt="美食探索">
+                    <i class="fas fa-utensils"></i>
+                    <h3>美食探索</h3>
+                    <p>喜欢探索各种美食，尤其是地方特色小吃。不仅享受美食带来的味觉体验，也喜欢了解美食背后的文化故事。偶尔也会尝试自己下厨。</p>
+                </div>
+                <div class="interest-card">
+                    <img src="images/运动.jpg" alt="户外运动">
+                    <i class="fas fa-hiking"></i>
+                    <h3>户外运动</h3>
+                    <p>热爱徒步、爬山等户外活动。在运动中释放压力，亲近自然，同时也能锻炼身体。经常和同学一起参加户外探索活动。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-weibo"></i></a>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-qq"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2024 个人主页，All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI对话框 -->
+    <div class="ai-chat" id="aiChat">
+        <!-- AI图标按钮 -->
+        <div class="ai-toggle" onclick="toggleChat()">
+            <i class="fas fa-robot"></i>
+        </div>
+        
+        <!-- 对话框容器 -->
+        <div class="chat-container" id="chatContainer">
+            <div class="ai-chat-header">
+                <span>AI助手</span>
+            </div>
+            <div class="ai-chat-body">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai">
+                        <i class="fas fa-robot"></i>
+                        <span>你好！我是AI助手，有什么可以帮你的吗？</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="输入你的问题...">
+                    <button onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js2.js"></script>
+</body>
+</html> 

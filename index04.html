@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线留言 - 我的世界</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="header-content">
+            <h1>在线留言</h1>
+            <p class="subtitle">期待您的留言</p>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+            <li><a href="index01.html"><i class="fas fa-heart"></i> 兴趣爱好</a></li>
+            <li><a href="index02.html"><i class="fas fa-image"></i> 个人相册</a></li>
+            <li><a href="school.html"><i class="fas fa-school"></i> 我的学校</a></li>
+            <li><a href="message.html" class="active"><i class="fas fa-comments"></i> 在线留言</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- 留言板部分 -->
+        <section class="section">
+            <h2 class="section-title">留下您的留言</h2>
+            <div class="message-container">
+                <!-- 留言表单 -->
+                <div class="message-form-container">
+                    <form class="message-form" id="messageForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> 您的姓名</label>
+                            <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> 电子邮箱</label>
+                            <input type="email" id="email" name="email" required placeholder="请输入您的邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-pencil-alt"></i> 留言内容</label>
+                            <textarea id="message" name="message" required placeholder="请输入您想说的话..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> 发送留言
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 留言展示区 -->
+                <div class="messages-display">
+                    <h3><i class="fas fa-comments"></i> 最新留言</h3>
+                    <div class="message-list" id="messageList">
+                        <!-- 示例留言 -->
+                        <div class="message-item">
+                            <div class="message-header">
+                                <span class="message-author"><i class="fas fa-user-circle"></i> 张三</span>
+                                <span class="message-date">2024-03-15</span>
+                            </div>
+                            <div class="message-content">
+                                网站做得很棒！希望能交个朋友。
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-header">
+                                <span class="message-author"><i class="fas fa-user-circle"></i> 李四</span>
+                                <span class="message-date">2024-03-14</span>
+                            </div>
+                            <div class="message-content">
+                                学校介绍很详细，对我很有帮助！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-weibo"></i></a>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-qq"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2024 个人主页，All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI对话框 -->
+    <div class="ai-chat" id="aiChat">
+        <!-- AI图标按钮 -->
+        <div class="ai-toggle" onclick="toggleChat()">
+            <i class="fas fa-robot"></i>
+        </div>
+        
+        <!-- 对话框容器 -->
+        <div class="chat-container" id="chatContainer">
+            <div class="ai-chat-header">
+                <span>AI助手</span>
+            </div>
+            <div class="ai-chat-body">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai">
+                        <i class="fas fa-robot"></i>
+                        <span>你好！我是AI助手，有什么可以帮你的吗？</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="输入你的问题...">
+                    <button onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js.js"></script>
+    <script src="js2.js"></script>
+</body>
+</html> 
